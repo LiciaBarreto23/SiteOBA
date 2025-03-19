@@ -1,0 +1,79 @@
+:root {
+  --fonte1: "DunbarTall", sans-serif;
+  --fonte2: "Roboto", sans-serif;
+  --fonte3: "Poppins", sans-serif;
+}
+
+.fonte1 {
+  font-family: "DunbarTall", sans-serif;
+}
+.fonte2 {
+  font-family: "Roboto", sans-serif;
+}
+.fonte3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.GG {
+  font-size: 4rem;
+}
+.G {
+  font-size: 3rem;
+}
+.MM {
+  font-size: 2rem;
+}
+.M {
+  font-size: 1.5rem;
+}
+.P {
+  font-size: 1.25rem;
+}
+.PP {
+  font-size: 1.125rem;
+}
+.D {
+  font-size: 1rem;
+}
+
+.bold{
+  font-weight: 800;
+}
+.semiBold{
+  font-weight: 600;
+}
+.regular{
+  font-weight: 400;
+}
+
+@media (max-width: 1000px){
+  .GG {
+    font-size: 3.5rem;
+  }
+  .G {
+    font-size: 2.5rem;
+  }
+  .MM {
+    font-size: 1.5rem;
+  }
+  .M {
+    font-size: 1.25rem;
+  }
+  .P {
+    font-size: 1.125rem;
+  }
+  .PP {
+    font-size: 1.062rem;
+  }
+  .D {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px){
+  .GG {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 600px){
+  
+}

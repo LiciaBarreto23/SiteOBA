@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bc_B5">
+    <div id="passasgens" class="container">
+      <header>
+        <img class="logo" src="img/logo.svg" alt="">
+        <nav class="fonte1 corB1 M">
+          <a class="atual" href="#passasgens">Passagens</a>
+          <a href="#quemsomos">Quem somos</a>
+          <a href="#contato">Contatos</a>
+        </nav>
+      </header>
+
+      <section id="home" class="parallax">
+        <div class="text">
+          <h1 class="fonte1 corB1 GG bold">Viajar ficou <br> fácil e seguro<span class="corA1 fonte3">.</span> </h1>
+          <p class="fonte2 corA3 M">Garanta sua passagem aérea e viaje sem preocupações!</p>
+          <button class="button1" onclick="enviarWhatsApp()">Fale conosco</button>
+        </div>
+        <div class="background-aviao"></div>
+        <div class="background-nuvens"></div>
+      </section>
+    </div>
+  </div>
+
+  <section class="container containerSpace">
+    <div class="div-form">
+      <div class="div_asks">
+        <div id="tipoVoo" class="select fonte2 corB5 D">
+          <div class="selected">
+            <div class="img_tipoVoo"></div>
+            <p class="tipoVoo-textSelect" data-default="Ida e Volta" data-one="Ida"></p>
+            <img class="arrow" src="img/arrow_down.svg" alt="">
+          </div>
+          <div class="options">
+            <div title="IdaVolta">
+              <input id="IdaVolta" name="option" type="radio" checked="" />
+              <label class="option" for="IdaVolta" data-txt="Ida e Volta"></label>
+            </div>
+            <div title="Ida">
+              <input id="Ida" name="option" type="radio" />
+              <label class="option" for="Ida" data-txt="Ida"></label>
+            </div>
+          </div>
+        </div>
+        <div id="tipoClasse" class="select fonte2 corB5 D">
+          <div class="selected">
+            <img src="img/icon_bag.svg" alt="">
+            <p class="tipoClasse-textSelect" data-default="Econômica" data-one="Premium" data-two="Executiva"></p>
+            <img class="arrow" src="img/arrow_down.svg" alt="">
+          </div>
+          <div class="options">
+            <div title="Economica">
+              <input id="economica" name="option1" type="radio" checked="" />
+              <label class="option1" for="economica" data-txt="Econômica"></label>
+            </div>
+            <div title="Premium">
+              <input id="premium" name="option1" type="radio" />
+              <label class="option1" for="premium" data-txt="Premium"></label>
+            </div>
+            <div title="Executiva">
+              <input id="executiva" name="option1" type="radio" />
+              <label class="option1" for="executiva" data-txt="Executiva"></label>
+            </div>
+          </div>
+        </div>
+        <div id="hospedagem" class="fonte2 corB5 D">
+          <div>
+            <input type="checkbox" id="cbx" style="display: none;">
+            <label for="cbx" class="check">
+              <svg width="18px" height="18px" viewBox="0 0 18 18">
+                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                <polyline points="1 9 7 14 15 4"></polyline>
+              </svg>
+            </label>
+          </div>
+          <label for="cbx" class="check1">Busco hospedagem e serviços</label>
+        </div>
+      </div>
+
+      <form action="post" id="form">
+        <div class="input_locais">
+          <div class="coolinput">
+            <label for="input_origem" class="text label1 fonte2 D bold corB5">Origem:</label>
+            <label for="input_origem" class="label2">
+              <img src="img/icon_Trip.svg" alt="">
+              <input type="text" placeholder="" id="input_origem" name="input_origem" class="input fonte2 PP regular corB5" required>
+            </label>
+          </div>
+
+          <div class="input_detalhe"></div>
+
+          <div class="coolinput">
+            <label for="input_destino" class="text label1 fonte2 D bold corB5">Destino:</label>
+            <label for="input_destino" class="label2">
+              <img src="img/icon_Location.svg" alt="">
+              <input type="text" placeholder="" id="input_destino" name="input_destino" class="input fonte2 PP regular corB5" required>
+            </label>
+
+          </div>
+        </div>
+        <div class="input_datas">
+          <div class="coolinput">
+            <label for="input_dataIda" class="text label1 fonte2 D bold corB5">Data Ida:</label>
+            <label for="input_dataIda" class="label2">
+              <img src="img/icon_Calendar.svg" alt="">
+              <input type="date" placeholder="" id="input_dataIda" name="input_dataIda" class="input fonte2 PP regular corB5" required>
+            </label>
+          </div>
+          <div class="coolinput" id="dataVolta">
+            <label for="input_dataVolta" class="text label1 fonte2 D bold corB5">Data Volta:</label>
+            <label for="input_dataVolta" class="label2">
+              <img src="img/icon_Calendar.svg" alt="">
+              <input type="date" placeholder="" id="input_dataVolta" name="input_dataVolta" class="input fonte2 PP regular corB5" required>
+            </label>
+          </div>
+        </div>
+
+        <label class="label_submit">
+          <img src="img/icon_submit.svg" alt="">
+          <input type="submit" value="" class="input_submit" id="input_submit">
+          <p class="fonte2 corB1 PP">Solicitar</p>
+        </label>
+      </form>
+    </div>
+  </section>
+
+  <section id="destinosNacionais" class="container containerSpace containerSection">
+    <div class="div-infos">
+      <h2 class="fonte1 corA1 MM">Destinos nacionais<span class="fonte3">.</span></h2>
+      <h3 class="fonte2 corB5 G LH_G bold">Novas ofertas <br>
+        <span class="fonte2 corB5 MM semiBold">imperdíveis</span>
+      </h3>
+      <p class="fonte2 corB4 P regular">Não perca promoções exclusivas. <br>
+        Escolha sua próxima viagem e nos cuidaremos de tudo!</p>
+    </div>
+    <div class="carousel1">
+
+    </div>
+  </section>
+
+
+  <script src="JS/homeAnimation.js"></script>
+  <script src="JS/mngWpp.js"></script>
+
+</body>
+
+</html>

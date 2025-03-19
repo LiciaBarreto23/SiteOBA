@@ -1,0 +1,26 @@
+.button1 {
+  width: 13rem;
+  height: 3.5rem;
+  padding: 15px 20px;
+  border-radius: 0.625rem;
+  background: linear-gradient(180deg, #00957b 66.92%, #0a4f43 111.89%);
+  box-shadow: none;
+  border: none;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: var(--corB1);
+}
+
+.button1:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .button1 {
+    width: 10rem;
+    height: 3rem;
+    padding: 5px 8px;
+    font-size: 1.25rem;
+  }
+}

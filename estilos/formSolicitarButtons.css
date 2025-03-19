@@ -1,0 +1,264 @@
+.select {
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+  height: 30px;
+}
+
+.selected {
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow {
+  z-index: 100000;
+  transition: 300ms;
+}
+
+.options {
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--corB3);
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.img_tipoVoo{
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.select:hover > .options {
+  opacity: 1;
+  top: 0;
+}
+
+.select:hover > .selected .arrow {
+  transform: rotate(180deg);
+}
+
+.option, .option1 {
+  border-radius: 5px;
+  padding: 5px;
+  transition: 300ms;
+  background-color: var(--corB3);
+  width: 150px;
+  font-size: 15px;
+}
+.option:hover, .option1:hover {
+  background-color: #cccccc57;
+  cursor: pointer;
+}
+
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options label {
+  display: inline-block;
+}
+.options label::before {
+  content: attr(data-txt);
+}
+
+.options input[type="radio"]:checked + label {
+  display: none;
+}
+
+.options input[type="radio"]#IdaVolta:checked + label {
+  display: none;
+}
+
+#tipoVoo.select:has(.options input[type="radio"]#IdaVolta:checked) .tipoVoo-textSelect::after {
+  content: attr(data-default);
+}
+#tipoVoo.select:has(.options input[type="radio"]#Ida:checked) .tipoVoo-textSelect::after {
+  content: attr(data-one);
+}
+#tipoVoo.select:has(.options input[type="radio"]#IdaVolta:checked) .img_tipoVoo{
+  background-image: url("../img/icon_IdaVolta1.svg");
+}
+#tipoVoo.select:has(.options input[type="radio"]#Ida:checked) .img_tipoVoo{
+  background-image: url("../img/icon_Ida1.svg");
+}
+
+#tipoClasse.select:has(.options input[type="radio"]#economica:checked) .tipoClasse-textSelect::after {
+  content: attr(data-default);
+}
+#tipoClasse.select:has(.options input[type="radio"]#premium:checked) .tipoClasse-textSelect::after {
+  content: attr(data-one);
+}
+#tipoClasse.select:has(.options input[type="radio"]#executiva:checked) .tipoClasse-textSelect::after {
+  content: attr(data-two);
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34,50,84,0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--corB5);
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg{
+  stroke: var(--corA1)
+}
+#hospedagem:has(.check1:hover) svg{
+  stroke: var(--corA1)
+}
+
+#cbx:checked + .check svg {
+  stroke: var(--corA1)
+}
+
+#cbx:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+#hospedagem{
+  width: max-content;
+  padding-top: 8px;
+  display: flex;
+  gap: 5px;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput .label1.text {
+  z-index: 10;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: var(--corB2);
+  width: fit-content;
+}
+
+.coolinput .input {
+  font-family: var(--fonte2);
+  padding: 11px 10px 11px 25px;
+  font-size: 0.75rem;
+  border: 2px var(--corB5) solid;
+  border-radius: 5px;
+  background: var(--corB2);
+}
+
+.coolinput .input:focus {
+  outline: none;
+  border: 2px var(--corA1) solid;
+}
+
+.label2{
+  position: relative;
+}
+.label2 img{
+  pointer-events: none;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type="date"]::-moz-focus-inner {
+  border: 0;
+}
+
+.label_submit{
+  margin-top: 1rem;
+  width: max-content;
+  height: max-content;
+  padding: 10px 10px;
+  border-radius: 0.625rem;
+  background-color: var(--corA1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.label_submit:hover{
+  transform: translateY(-2px);
+  background-color: #008f77;
+}
+.label_submit input{
+  display: none;
+}
+
+#dataVolta.oculto{
+  cursor: default;
+  pointer-events: none;
+}
+#dataVolta.oculto .label1{
+  text-decoration: line-through;
+}

@@ -1,0 +1,81 @@
+.div-form {
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 2px solid var(--corB3);
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: max-content;
+}
+.div_asks {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  align-items: start;
+  top: 20px;
+}
+#form {
+  margin-top: 15px;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.input_locais,
+.input_datas {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.input_detalhe {
+  margin-top: 1rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--corA1);
+  background-image: url("../img/icon_IdaVolta.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 1000px) {
+  #form {
+    gap: 30px;
+  }
+  .input_locais,
+  .input_datas {
+    gap: 10px;
+  }
+  .input_detalhe {
+    width: 28px;
+    height: 28px;
+  }
+  .div_asks{
+    gap: 5px;
+  }
+}
+@media (max-width: 900px) {
+  #form {
+    grid-template-columns: auto auto;
+    gap: 0px;
+    row-gap: 5px;
+  }
+  .input_datas {
+    grid-row: 2;
+  }
+  .label_submit {
+    grid-row: 2;
+  }
+  .input_locais,
+  .input_datas {
+    gap: 15px;
+  }
+  .div_asks {
+    grid-template-columns: auto auto;
+  }
+  #hospedagem{
+    grid-row: 1;
+    grid-column: 2;
+  }
+}

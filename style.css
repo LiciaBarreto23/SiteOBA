@@ -1,0 +1,55 @@
+@import "estilos/cores.css";
+@import "estilos/fontes.css";
+@import "estilos/utilitarios.css";
+@import "estilos/header.css";
+@import "estilos/home.css";
+@import "estilos/formSolicitar.css";
+@import "estilos/formSolicitarButtons.css";
+@import "estilos/sections.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "DunbarTall";
+  src: url("/fonts/dunbarTall-regular.eot");
+  src: url("/fonts/dunbarTall-regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/dunbarTall-regular.woff2") format("woff2"),
+    url("/fonts/dunbarTall-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fonte Bold */
+@font-face {
+  font-family: "DunbarTall";
+  src: url("/fonts/dunbarTall-bold.eot");
+  src: url("/fonts/dunbarTall-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/dunbarTall-bold.woff2") format("woff2"),
+    url("/fonts/dunbarTall-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--corB2);
+  height: 10000px;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.containerSpace {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.containerSection{
+  margin-top: 80px;
+}

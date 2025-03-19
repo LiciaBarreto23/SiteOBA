@@ -1,0 +1,83 @@
+#home {
+  padding-top: 60px;
+}
+#home .text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+#home .text h1 {
+  text-align: center;
+  line-height: 4.25rem;
+}
+#home .text p {
+  text-align: center;
+  font-weight: 300;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  padding-bottom: 250px;
+  overflow-x: hidden;
+}
+
+.background-aviao {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  width: 100%;
+  height: 120px; /* altura ajustável */
+  background-image: url("../img/aviao.svg"); /* substitua com o nome da sua imagem */
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+  transition: background-position 0.1s ease-out; /* Suaviza a transição */
+}
+.background-nuvens {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* ajuste a altura conforme a imagem */
+  background-image: url("../img/nuvens.svg"); /* coloque a imagem das nuvens */
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+  transition: background-position 0.1s ease-out;
+}
+
+@media (max-width: 1280px) {
+  #home {
+    padding-top: 40px;
+  }
+  #home .text {
+    gap: 20px;
+  }
+  .background-aviao {
+    position: absolute;
+    bottom: 120px;
+  }
+}
+@media (max-width: 700px) {
+  .background-aviao {
+    height: 90px; /* altura ajustável */
+    bottom: 120px;
+  }
+  .background-nuvens {
+    height: 120px;
+  }
+  .parallax {
+    padding-bottom: 200px;
+  }
+}

@@ -1,3 +1,15 @@
+.containerSection{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.div-infos{
+  flex: 1 1 300px; 
+  width: max-content;
+}
 .div-infos h3{
   padding-top: 20px;
   padding-bottom: 20px;
